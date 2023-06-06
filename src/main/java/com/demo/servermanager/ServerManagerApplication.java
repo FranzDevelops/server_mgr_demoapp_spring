@@ -3,6 +3,7 @@ package com.demo.servermanager;
 import com.demo.servermanager.enumeration.Status;
 import com.demo.servermanager.model.Server;
 import com.demo.servermanager.repo.ServerRepo;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,6 +15,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 
 @SpringBootApplication
+@EntityScan("com.demo.servermanager.model")
 public class ServerManagerApplication {
 
 	public static void main(String[] args) {
